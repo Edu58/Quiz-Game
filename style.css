@@ -19,10 +19,15 @@ nav {
 }
 
 .landing .slogan {
-    min-height: 30vh;
+    min-height: 50vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.landing .slogan h1 {
+    margin-bottom: 1.5rem;
 }
 
 #P {
