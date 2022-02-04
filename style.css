@@ -60,10 +60,3 @@ nav {
 .quizes .header {
     margin-bottom: 2rem;
 }
-
-
-footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
