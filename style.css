@@ -60,3 +60,16 @@ nav {
 .quizes .header {
     margin-bottom: 2rem;
 }
+
+.quizes .questions form {
+    width: 50%;
+    height: auto;
+}
+
+.quizes .questions form label {
+    color: #150050;
+}
+
+#submit {
+    background-color: #150050;
+}
