@@ -45,12 +45,20 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 20vh;
+    min-height: 50vh;
 }
 
 .startBtn button {
     background-color: #1E3E83;
     color: #FFFF;
+}
+
+.quizes {
+    min-height: 100vh;
+}
+
+.quizes .header {
+    margin-bottom: 2rem;
 }
 
 
