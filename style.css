@@ -10,18 +10,21 @@ nav {
     background-color: #1E3E83;
 }
 
+nav .collapse ul li a:hover {
+    background-color: #FF0E65;
+    color: #FFFF;
+}
+
 .landing {
     height: 50vh;
     background-color: #1E3E83;
     clip-path: ellipse(60% 70% at 50% 30%);
+    transition: .2s all;
 }
 
 .landing .slogan {
     min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    transition: 1s all;
 }
 
 .landing .slogan h1 {
@@ -42,14 +45,17 @@ nav {
 }
 
 .startBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 50vh;
 }
 
 .startBtn button {
     background-color: #1E3E83;
+    color: #FFFF;
+    transition: .2s all;
+}
+
+.startBtn button:hover {
+    background-color: #FF0E65;
     color: #FFFF;
 }
 
@@ -72,4 +78,10 @@ nav {
 
 #submit {
     background-color: #150050;
+    transition: .2 all;
+}
+
+#submit:hover {
+    background-color: #FF0E65;
+    color: #FFFF;
 }
