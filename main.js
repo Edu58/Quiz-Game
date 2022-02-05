@@ -1,6 +1,8 @@
-const submit = document.getElementById("submitBtn")
-const answers = []
-
+const form = document.getElementById("form")
+const submit = document.getElementById("submitBtn");
+const answers = ["b", "b", "d", "d", "b"];
+const total = 5;
+let score = 0;
 
 submit.addEventListener('click', (e) => {
   e.preventDefault()
@@ -12,6 +14,13 @@ submit.addEventListener('click', (e) => {
   const que4 = document.quizForm.q4.value;
   const que5 = document.quizForm.q5.value;
 
+  for (let i = 1; i <= total; i++) {
+    //check correctness
+    if (eval('que' + i) == answers[i - 1]) {
+      score ++;
+    }
+  }
+  console.log(score);
 });
 
 
