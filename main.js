@@ -51,7 +51,7 @@ submit.addEventListener("click", (e) => {
     <h3 class="fw-bolder my-3">You scored: ${score} Points</h3>
 
     <div class="closeBtn">
-        <button class="btn btn-sm btn-secondary text-light" onclick="closeIt()">
+        <button class="btn btn-sm btn-danger text-light" onclick="closeIt()">
         close
         </button>
     </div>
