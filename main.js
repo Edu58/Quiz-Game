@@ -1,5 +1,6 @@
 const form = document.getElementById("form")
 const submit = document.getElementById("submitBtn");
+const popup = document.getElementById("scorePopup")
 const answers = ["b", "b", "d", "d", "b"];
 const total = 5;
 let score = 0;
@@ -17,21 +18,18 @@ submit.addEventListener('click', (e) => {
   for (let i = 1; i <= total; i++) {
     //check correctness
     if (eval('que' + i) == answers[i - 1]) {
-      score ++;
+      score +=20;
     }
   }
   console.log(score);
-});
 
-
-  /*
-popup.innerHTML = `
+  popup.innerHTML = `
     <div class="card p-3 text-light">
     <div class="card-body">
     <i class="fas fa-trophy"></i>
 
     <h2 class="fw-bolder">Congratulations!!</h2>
-    <h4 class="fw-bolder my-3">You scored: 100/100 Marks</h4>
+    <h4 class="fw-bolder my-3">You scored: ${score} Points</h4>
 
     <div class="closeBtn">
         <button class="btn btn-sm btn-info text-light mx-2" id="retry">
@@ -44,6 +42,11 @@ popup.innerHTML = `
     </div>
     </div>                    
 `;
+});
+
+
+  /*
+
 
 }
 */
