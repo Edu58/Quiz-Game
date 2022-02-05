@@ -1,5 +1,7 @@
 # Simple Quiz Game
 
+#### Figma design - https://www.figma.com/file/tZvXikNIB4zGhIBx2WeBXy/Penguin?node-id=0%3A1
+
 ![landing page](images/Quiz.png)
 
 ## Project Description
