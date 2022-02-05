@@ -87,15 +87,25 @@ nav .collapse ul li a:hover {
     color: #FFFF;
 }
 
+#scorePopup {
+    transition: 3s all;
+}
+
 #scorePopup .card {
     position: absolute;
     text-align: center;
-    top: 20%;
+    bottom: 20%;
     left: 25%;
     width: 50%;
     height: auto;
     margin: auto;
-    background-color: #068a6d;
+    color: #150050;
+    background-color: #eeeeee;
+    transition: 3s all;
+}
+
+#scorePopup.close{
+    display: none;
 }
 
 #scorePopup .card i {

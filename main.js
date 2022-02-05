@@ -1,6 +1,8 @@
 const form = document.getElementById("form")
 const submit = document.getElementById("submitBtn");
 const popup = document.getElementById("scorePopup")
+const retryBtn = document.getElementById("retry")
+const popupDissapear = document.getElementById("removePopup")
 const answers = ["b", "b", "d", "d", "b"];
 const total = 5;
 let score = 0;
@@ -22,20 +24,19 @@ submit.addEventListener('click', (e) => {
     }
   }
   console.log(score);
+  form.reset();
+  popup.classList.remove("close");
 
   popup.innerHTML = `
-    <div class="card p-3 text-light">
+    <div class="card p-3" id="removePopup">
     <div class="card-body">
+    <h3 class="card-header fw-bolder">Quiz Submitted Successfully</h3>
     <i class="fas fa-trophy"></i>
 
-    <h2 class="fw-bolder">Congratulations!!</h2>
-    <h4 class="fw-bolder my-3">You scored: ${score} Points</h4>
+    <h2 class="fw-bolder my-3">You scored: ${score} Points</h2>
 
     <div class="closeBtn">
-        <button class="btn btn-sm btn-info text-light mx-2" id="retry">
-        retry
-        </button>
-        <button class="btn btn-sm btn-secondary text-light" id="close">
+        <button class="btn btn-sm btn-secondary text-light" onclick="closeIt()">
         close
         </button>
     </div>
@@ -44,9 +45,7 @@ submit.addEventListener('click', (e) => {
 `;
 });
 
-
-  /*
-
-
-}
-*/
+function closeIt() {
+  popup.classList.add("close")
+  score = 0;
+};
