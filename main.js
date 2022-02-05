@@ -20,9 +20,18 @@ submit.addEventListener('click', (e) => {
   for (let i = 1; i <= total; i++) {
     //check correctness
     if (eval('que' + i) == answers[i - 1]) {
-      score +=20;
+      score += 20;
     }
   }
+    //custom message depending on score
+    if (score >= 80) {
+      message = "Excellent Score 👏"
+    } else if(score >= 50 && score < 80) {
+      message = "Fair Score 👌"
+    } else if(score < 50) {
+      message = "Poor score. Try harder next time 😔"
+    }
+
   console.log(score);
   form.reset();
   popup.classList.remove("close");
@@ -33,7 +42,8 @@ submit.addEventListener('click', (e) => {
     <h3 class="card-header fw-bolder">Quiz Submitted Successfully</h3>
     <i class="fas fa-trophy"></i>
 
-    <h2 class="fw-bolder my-3">You scored: ${score} Points</h2>
+    <h3 class="fw-bolder">${message}</h3>
+    <h3 class="fw-bolder my-3">You scored: ${score} Points</h3>
 
     <div class="closeBtn">
         <button class="btn btn-sm btn-secondary text-light" onclick="closeIt()">
@@ -45,6 +55,7 @@ submit.addEventListener('click', (e) => {
 `;
 });
 
+// Close score  popup
 function closeIt() {
   popup.classList.add("close")
   score = 0;
