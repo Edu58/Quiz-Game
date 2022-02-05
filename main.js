@@ -1,14 +1,15 @@
-const form = document.getElementById("form")
+const form = document.getElementById("form");
 const submit = document.getElementById("submitBtn");
-const popup = document.getElementById("scorePopup")
-const retryBtn = document.getElementById("retry")
-const popupDissapear = document.getElementById("removePopup")
+const popup = document.getElementById("scorePopup");
+const retryBtn = document.getElementById("retry");
+const popupDissapear = document.getElementById("removePopup");
 const answers = ["b", "b", "d", "d", "b"];
 const total = 5;
 let score = 0;
 
-submit.addEventListener('click', (e) => {
-  e.preventDefault()
+// listen for form submission
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
 
   // Get user input
   const que1 = document.quizForm.q1.value;
@@ -19,23 +20,27 @@ submit.addEventListener('click', (e) => {
 
   for (let i = 1; i <= total; i++) {
     //check correctness
-    if (eval('que' + i) == answers[i - 1]) {
+    if (eval("que" + i) == answers[i - 1]) {
       score += 20;
     }
   }
-    //custom message depending on score
-    if (score >= 80) {
-      message = "Excellent Score 👏"
-    } else if(score >= 50 && score < 80) {
-      message = "Fair Score 👌"
-    } else if(score < 50) {
-      message = "Poor score. Try harder next time 😔"
-    }
 
-  console.log(score);
+  //custom message depending on score
+  if (score >= 80) {
+    message = "Excellent Score 👏";
+  } else if (score >= 50 && score < 80) {
+    message = "Fair Score 👌";
+  } else if (score < 50) {
+    message = "Poor score. <br> Try harder next time 😔";
+  }
+
+  // reset form
   form.reset();
+
+  //remove close class from the score popup div
   popup.classList.remove("close");
 
+  // add div showing the score and the message
   popup.innerHTML = `
     <div class="card p-3" id="removePopup">
     <div class="card-body">
@@ -57,6 +62,6 @@ submit.addEventListener('click', (e) => {
 
 // Close score  popup
 function closeIt() {
-  popup.classList.add("close")
+  popup.classList.add("close");
   score = 0;
-};
+}

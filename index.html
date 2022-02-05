@@ -17,6 +17,8 @@
     <title>Penguin</title>
 </head>
 <body>
+
+    <!--Homepage-->
     <section class="landing">
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
             <div class="container">
@@ -32,7 +34,7 @@
                             <a class="nav-link active text-light fs-6 fw-bolder rounded" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mx-5 text-light fs-6 fw-bolder rounded" href="#">About</a>
+                            <a class="nav-link active text-light fs-6 fw-bolder rounded" href="#">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active text-light fs-6 fw-bolder rounded" href="#">Help</a>
@@ -42,6 +44,7 @@
             </div>
         </nav>
 
+        <!--Slogan in the semicircle-->
         <div class="slogan text-light d-flex flex-column justify-content-center align-items-center">
             <h1>Test Your Quiz Experience</h1>
             <small class="text-center">
@@ -50,10 +53,13 @@
         </div>
     </section>
 
+    <!--Centered start quiz button in homepage-->
     <div class="startBtn d-flex justify-content-center align-items-center">
         <button class="btn btn-lg" id="start"><a href="#questions" class="text-decoration-none text-light">Start Quiz</a></button>
     </div>
 
+
+    <!--Quiz section-->
     <section class="quizes">
         <div class="header d-flex justify-content-center align-items-center flex-column">
             <h1 class="fw-bolder" id="questions">Quiz Board</h1>
@@ -63,6 +69,8 @@
         </div>
 
         <div class="questions d-flex flex-column align-items-center">
+
+            <!--Quiz form with questions and choices-->
             <form id="form" name="quizForm">
                 <div class="m-5">
                     <p for="question1" class="form-label fs-5 fw-bold">1. Who is the president of Kenya?</p> <br>
@@ -75,7 +83,7 @@
                 </div>
 
                 <div class="m-5">
-                    <label for="question1" class="form-label fs-5 fw-bold">2. What is the capital city of Kenya?</label> <br>
+                    <p for="question1" class="form-label fs-5 fw-bold">2. What is the capital city of Kenya?</p> <br>
                    <div class="container">
                         <input class="form-check-input me-3" type="radio" name="q2" value="a" id="question1"> Nakuru<br>
                         <input class="form-check-input me-3" type="radio" name="q2" value="b" id="question1"> Nairobi <br>
@@ -85,7 +93,7 @@
                 </div>
 
                 <div class="m-5">
-                    <label for="question1" class="form-label fs-5 fw-bold">3. What kind of energy is contained in a rock or cliff?</label> <br>
+                    <p for="question1" class="form-label fs-5 fw-bold">3. What kind of energy is contained in a rock or cliff?</p> <br>
                    <div class="container">
                         <input class="form-check-input me-3" type="radio" name="q3" value="a" id="question1"> Solar<br>
                         <input class="form-check-input me-3" type="radio" name="q3" value="b" id="question1"> Kinetic <br>
@@ -95,7 +103,7 @@
                 </div>
 
                 <div class="m-5">
-                    <label for="question1" class="form-label fs-5 fw-bold">4. Which of these forces is slow motion?</label> <br>
+                    <p for="question1" class="form-label fs-5 fw-bold">4. Which of these forces is slow motion?</p> <br>
                    <div class="container">
                         <input class="form-check-input me-3" type="radio" name="q4" value="a" id="question1"> Friction<br>
                         <input class="form-check-input me-3" type="radio" name="q4" value="b" id="question1"> Spin <br>
@@ -105,7 +113,7 @@
                 </div>
 
                 <div class="m-5">
-                    <label for="question1" class="form-label fs-5 fw-bold">5. Which programming language is best for data science?</label> <br>
+                    <p for="question1" class="form-label fs-5 fw-bold">5. Which programming language is best for data science?</p> <br>
                    <div class="container">
                         <input class="form-check-input me-3" type="radio" name="q5" value="a" id="question1"> Javascript<br>
                         <input class="form-check-input me-3" type="radio" name="q5" value="b" id="question1"> Python <br>
@@ -114,16 +122,19 @@
                    </div>
                 </div>
 
-                  <button class="btn btn-lg text-light w-100" type="submit" id="submitBtn">submit</button>
+                <!--Quiz submit button-->
+                <button class="btn btn-lg text-light w-100" type="submit" id="submitBtn">submit</button>
             </form>
         </div>
 
+        <!--Score popup div-->
         <div id="scorePopup">
 
         </div>
+
     </section>
 
-
+    <!--Footer-->
     <footer class="d-flex justify-content-evenly align-items-center mt-5 mb-1">
         <a class="navbar-brand text-dark fs-5 fw-bolder text-decoration-none" href="#"><span id="P">P</span>enguin</a>
         <small>All rights reserved to Penguin inc.</small>
@@ -131,8 +142,9 @@
 
     <!--Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
+
     <!--Custom js file-->
     <script src="main.js"></script>
+    
 </body>
 </html>
